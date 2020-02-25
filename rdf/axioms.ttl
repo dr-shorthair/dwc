@@ -1,0 +1,275 @@
+# baseURI: http://rs.tdwg.org/dwc/axioms
+# imports: file:///LocI-Resources/cache-external/doap.rdf
+# imports: http://purl.org/dc/terms/
+# imports: http://rs.tdwg.org/dwc/iri/
+# imports: http://rs.tdwg.org/dwc/terms/
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/ns/prov-o#
+# prefix: axioms
+
+@prefix axioms: <http://rs.tdwg.org/dwc/axioms#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+@prefix dwciri: <http://rs.tdwg.org/dwc/iri/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix p1: <http://example.org/file1#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://rs.tdwg.org/dwc/axioms>
+  a owl:Ontology ;
+  dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
+  dcterms:modified "2020-02-26"^^xsd:date ;
+  owl:imports <file:///LocI-Resources/cache-external/doap.rdf> ;
+  owl:imports dcterms: ;
+  owl:imports dwciri: ;
+  owl:imports dwc: ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/ns/prov-o#> ;
+  prov:wasGeneratedBy [
+      a doap:Project ;
+      a prov:Activity ;
+      doap:repository <https://github.com/tdwg/dwc> ;
+    ] ;
+.
+dwciri:behavior
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Occurrence ;
+.
+dwciri:dataGeneralizations
+  a owl:ObjectProperty ;
+.
+dwciri:disposition
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Occurrence ;
+.
+dwciri:earliestGeochronologicalEra
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:GeologicalContext ;
+.
+dwciri:establishmentMeans
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Occurrence ;
+.
+dwciri:fieldNotes
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Event ;
+.
+dwciri:fieldNumber
+  a owl:DatatypeProperty ;
+  rdfs:domain dwc:Event ;
+  rdfs:subPropertyOf dcterms:identifier ;
+.
+dwciri:footprintSRS
+  a owl:DatatypeProperty ;
+  rdfs:domain dcterms:Location ;
+.
+dwciri:footprintWKT
+  a owl:DatatypeProperty ;
+  rdfs:domain dcterms:Location ;
+.
+dwciri:fromLithostratigraphicUnit
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:GeologicalContext ;
+.
+dwciri:geodeticDatum
+  a owl:ObjectProperty ;
+  rdfs:domain dcterms:Location ;
+.
+dwciri:georeferenceProtocol
+  a owl:ObjectProperty ;
+  rdfs:domain dcterms:Location ;
+.
+dwciri:georeferenceSources
+  a owl:ObjectProperty ;
+  rdfs:domain dcterms:Location ;
+.
+dwciri:georeferenceVerificationStatus
+  a owl:ObjectProperty ;
+  rdfs:domain dcterms:Location ;
+.
+dwciri:georeferencedBy
+  a owl:ObjectProperty ;
+  rdfs:domain dcterms:Location ;
+.
+dwciri:habitat
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Event ;
+.
+dwciri:identificationQualifier
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Identification ;
+.
+dwciri:identificationVerificationStatus
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Identification ;
+.
+dwciri:identifiedBy
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Identification ;
+  rdfs:range dcterms:Agent ;
+.
+dwciri:inCollection
+  a owl:ObjectProperty ;
+.
+dwciri:inDataset
+  a owl:ObjectProperty ;
+.
+dwciri:inDescribedPlace
+  a owl:ObjectProperty ;
+  rdfs:domain dcterms:Location ;
+.
+dwciri:latestGeochronologicalEra
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:GeologicalContext ;
+.
+dwciri:lifeStage
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Occurrence ;
+.
+dwciri:locationAccordingTo
+  a owl:ObjectProperty ;
+  rdfs:domain dcterms:Location ;
+.
+dwciri:measurementDeterminedBy
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:MeasurementOrFact ;
+  rdfs:range dcterms:Agent ;
+.
+dwciri:measurementMethod
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:MeasurementOrFact ;
+.
+dwciri:measurementType
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:MeasurementOrFact ;
+.
+dwciri:measurementUnit
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:MeasurementOrFact ;
+.
+dwciri:occurrenceStatus
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Occurrence ;
+.
+dwciri:organismQuantityType
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Occurrence ;
+.
+dwciri:preparations
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Occurrence ;
+.
+dwciri:recordNumber
+  a owl:DatatypeProperty ;
+  rdfs:domain dwc:Occurrence ;
+  rdfs:subPropertyOf dcterms:identifier ;
+.
+dwciri:recordedBy
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Occurrence ;
+  rdfs:range dcterms:Agent ;
+.
+dwciri:reproductiveCondition
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Occurrence ;
+.
+dwciri:sampleSizeUnit
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Event ;
+.
+dwciri:samplingProtocol
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Event ;
+.
+dwciri:sex
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Occurrence ;
+.
+dwciri:toTaxon
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Identification ;
+.
+dwciri:typeStatus
+  a owl:ObjectProperty ;
+  rdfs:domain dwc:Identification ;
+.
+dwciri:verbatimCoordinateSystem
+  a owl:ObjectProperty ;
+  rdfs:domain dcterms:Location ;
+.
+dwciri:verbatimSRS
+  a owl:ObjectProperty ;
+  rdfs:domain dcterms:Location ;
+.
+dwc:Dataset
+  a owl:Class ;
+.
+dwc:Event
+  a owl:Class ;
+.
+dwc:EventAttribute
+  a owl:Class ;
+.
+dwc:EventMeasurement
+  a owl:Class ;
+.
+dwc:FossilSpecimen
+  a owl:Class ;
+.
+dwc:GeologicalContext
+  a owl:Class ;
+.
+dwc:HumanObservation
+  a owl:Class ;
+.
+dwc:Identification
+  a owl:Class ;
+.
+dwc:LivingSpecimen
+  a owl:Class ;
+.
+dwc:MachineObservation
+  a owl:Class ;
+.
+dwc:MaterialSample
+  a owl:Class ;
+.
+dwc:MeasurementOrFact
+  a owl:Class ;
+.
+dwc:Occurrence
+  a owl:Class ;
+.
+dwc:OccurrenceMeasurement
+  a owl:Class ;
+.
+dwc:Organism
+  a owl:Class ;
+.
+dwc:PreservedSpecimen
+  a owl:Class ;
+.
+dwc:ResourceRelationship
+  a owl:Class ;
+.
+dwc:Sample
+  a owl:Class ;
+.
+dwc:SampleAttribute
+  a owl:Class ;
+.
+dwc:SamplingEvent
+  a owl:Class ;
+.
+dwc:SamplingLocation
+  a owl:Class ;
+.
+dwc:Taxon
+  a owl:Class ;
+.
