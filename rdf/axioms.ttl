@@ -1,8 +1,8 @@
 # baseURI: http://rs.tdwg.org/dwc/axioms
-# imports: file:///LocI-Resources/cache-external/doap.rdf
 # imports: http://purl.org/dc/terms/
 # imports: http://rs.tdwg.org/dwc/iri/
 # imports: http://rs.tdwg.org/dwc/terms/
+# imports: http://usefulinc.com/ns/doap
 # imports: http://www.w3.org/2004/02/skos/core
 # imports: http://www.w3.org/ns/prov-o#
 # prefix: axioms
@@ -24,10 +24,10 @@
   a owl:Ontology ;
   dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
   dcterms:modified "2020-02-26"^^xsd:date ;
-  owl:imports <file:///LocI-Resources/cache-external/doap.rdf> ;
   owl:imports dcterms: ;
   owl:imports dwciri: ;
   owl:imports dwc: ;
+  owl:imports <http://usefulinc.com/ns/doap> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:imports <http://www.w3.org/ns/prov-o#> ;
   prov:wasGeneratedBy [
